@@ -30,6 +30,11 @@ function EditFriend(props) {
       props.setUser(res.data)
     })
     .catch(err => console.log(err))
+    setEditedFriend({
+      name: "",
+      age: "",
+      email: "",
+    })
     toggle()
   }
 

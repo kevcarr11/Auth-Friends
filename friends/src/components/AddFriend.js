@@ -29,6 +29,11 @@ function AddFriend(props) {
       props.setUser(res.data)
     })
     .catch(err => console.log(err))
+    setNewFriend({
+      name: "",
+      age: "",
+      email: "",
+    })
     toggle()
   }
 
