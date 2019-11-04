@@ -42,7 +42,7 @@ function EditFriend(props) {
 
   return (
     <div>
-    <Button color="info" onClick={toggle}>Edit</Button>
+    <Button color="link" onClick={toggle}>Edit</Button>
     <Modal isOpen={modal} toggle={toggle}>
       <ModalHeader toggle={toggle}>Add a new friend</ModalHeader>
       <ModalBody>
