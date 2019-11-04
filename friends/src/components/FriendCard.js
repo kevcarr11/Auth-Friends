@@ -4,7 +4,7 @@ import { Toast, ToastBody, ToastHeader } from 'reactstrap';
 
 function FriendCard(props) {
   return (
-    <div className="p-3 my-2 rounded bg-docs-transparent-grid">
+    <div className="p-3 bg-info my-2 rounded">
         <Toast>
           <ToastHeader>
             {props.friend.name}
