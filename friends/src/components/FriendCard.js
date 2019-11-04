@@ -1,6 +1,6 @@
 import React from 'react'
 import { Toast, ToastBody, ToastHeader } from 'reactstrap';
-
+import EditFriend from "./EditFriend"
 
 function FriendCard(props) {
   return (
@@ -13,6 +13,7 @@ function FriendCard(props) {
             <div>Age: {props.friend.age}</div>
             <div>Email: {props.friend.email}</div>
           </ToastBody>
+          <EditFriend setUser={props.setUser} friendId={props.friend.id} />
         </Toast>
       </div>
   )

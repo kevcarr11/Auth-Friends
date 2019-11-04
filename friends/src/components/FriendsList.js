@@ -23,7 +23,7 @@ function FriendsList(props) {
       <h1>My Friends List</h1>
       <AddFriend setUser={setUser} />
       {user.map((friend, index) => (
-        <FriendCard key={index} friend={friend} />
+        <FriendCard key={index} friend={friend} setUser={setUser} />
       ))}
     </div>
   )
