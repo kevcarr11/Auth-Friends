@@ -25,17 +25,10 @@ function AddFriend(props) {
     e.preventDefault()
 
     AuthWithAxios().post("/api/friends", newFriend)
-    .then(() => {
-      AuthWithAxios().get("api/friends")
-      .then((res) => props.setUser(res.data))
+    .then((res) => {
+      props.setUser(res.data)
     })
     .catch(err => console.log(err))
-    setNewFriend({
-      name: "",
-      age: "",
-      email: "",
-      id: Date.now()
-    })
     toggle()
   }
 

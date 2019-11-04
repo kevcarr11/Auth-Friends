@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Spinner } from 'reactstrap';
 import AuthWithAxios from "../utils/AuthWithAxios"
 
 function Login(props) {
@@ -36,7 +37,9 @@ function Login(props) {
   return (
     <>
       {isLoading ? (
-        <div className="lds-ring"></div>
+        <div>
+          <Spinner color="dark" />
+        </div>
       ) : (
           <div>
             <form onSubmit={handleSubmit}>

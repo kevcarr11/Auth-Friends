@@ -26,17 +26,10 @@ function EditFriend(props) {
     e.preventDefault()
 
     AuthWithAxios().put(`/api/friends/${props.friendId}`, editFriend)
-    .then(() => {
-      AuthWithAxios().get("api/friends")
-      .then((res) => props.setUser(res.data))
+    .then((res) => {
+      props.setUser(res.data)
     })
     .catch(err => console.log(err))
-    setEditedFriend({
-      name: "",
-      age: "",
-      email: "",
-      id: Date.now()
-    })
     toggle()
   }
 
@@ -44,12 +37,12 @@ function EditFriend(props) {
     <div>
     <Button color="link" onClick={toggle}>Edit</Button>
     <Modal isOpen={modal} toggle={toggle}>
-      <ModalHeader toggle={toggle}>Add a new friend</ModalHeader>
+      <ModalHeader toggle={toggle}>Change Friend Info</ModalHeader>
       <ModalBody>
         <form>
-          <input  placeholder="Name" type="text" name="name" value={editFriend.name} onChange={handleChanges} />
-          <input  placeholder="Age" type="number" name="age" value={editFriend.age} onChange={handleChanges} />
-          <input  placeholder="Email" type="email" name="email" value={editFriend.email} onChange={handleChanges} />
+          <input  placeholder="Edit Name" type="text" name="name" value={editFriend.name} onChange={handleChanges} />
+          <input  placeholder="Edit Age" type="number" name="age" value={editFriend.age} onChange={handleChanges} />
+          <input  placeholder="Edit Email" type="email" name="email" value={editFriend.email} onChange={handleChanges} />
         </form>
       </ModalBody>
       <ModalFooter>

@@ -4,6 +4,7 @@ import ProtectedRoute from "./utils/ProtectedRoute"
 import './App.css';
 import Login from "./components/login";
 import Logout from "./components/Logout"
+import Home from "./components/Home"
 import FriendsList from "./components/FriendsList"
 import { getToken } from "./utils/AuthWithAxios"
 
@@ -18,6 +19,7 @@ function App() {
         {loggedIn && <Link to="/logout">Logout</Link>}
       </nav>
       
+      <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
       <ProtectedRoute exact path="/friends" component={FriendsList} />
       <ProtectedRoute exact path="/logout" component={Logout} />
