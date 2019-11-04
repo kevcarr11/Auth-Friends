@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link } from "react-router-dom"
+import ProtectedRoute from "./utils/ProtectedRoute"
 import './App.css';
 import Login from "./components/login";
 import FriendsList from "./components/FriendsList"
@@ -14,7 +15,7 @@ function App() {
       </nav>
       
       <Route exact path="/login" component={Login} />
-      <Route exact path="/friends" component={FriendsList} />
+      <ProtectedRoute exact path="/friends" component={FriendsList} />
     </div>
   );
 }

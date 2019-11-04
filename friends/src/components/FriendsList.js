@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import AuthWithAxios from "../utils/AuthWithAxios"
+import FriendCard from "./FriendCard"
 
 function FriendsList(props) {
   const [user, setUser] = useState([])
@@ -17,7 +18,9 @@ function FriendsList(props) {
   return (
     <>
       <h1>My Friends List</h1>
-      
+      {user.map((friend, index) => (
+        <FriendCard key={index} friend={friend} />
+      ))}
     </>
   )
 }
