@@ -10,7 +10,7 @@ body {
 
 .App{
 	text-align: center;
-	margin-left: 55px;
+	margin-left: 25px;
 }
 
 .wrapper {
@@ -83,4 +83,14 @@ button:hover {
 	opacity: 0.7;
 }
 
-
+main {
+  width: 85vw;
+  min-height: 40vh;
+  max-width: 500px;
+  margin: auto;
+  background: whitesmoke;
+  padding: 35px;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+	display: flex;
+	justify-content: center;
+}

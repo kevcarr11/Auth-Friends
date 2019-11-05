@@ -11,6 +11,7 @@ import { getToken } from "./utils/AuthWithAxios"
 function App() {
   const loggedIn = getToken()
   return (
+
     <div className="App wrapper">
       <nav>
         <NavLink exact activeClassName="selected" className="link" to="/">Home</NavLink>
@@ -18,12 +19,14 @@ function App() {
         {loggedIn && <NavLink className="link" activeClassName="selected" to="/friends">My Friends</NavLink>}
         {loggedIn && <NavLink className="link" activeClassName="selected" to="/logout">Logout</NavLink>}
       </nav>
-      
-      <Route exact path="/" component={Home} />
-      <Route exact path="/login" component={Login} />
-      <ProtectedRoute exact path="/friends" component={FriendsList} />
-      <ProtectedRoute exact path="/logout" component={Logout} />
+      <main>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
+        <ProtectedRoute exact path="/friends" component={FriendsList} />
+        <ProtectedRoute exact path="/logout" component={Logout} />
+      </main>
     </div>
+
   );
 }
 
