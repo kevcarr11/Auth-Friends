@@ -4,7 +4,7 @@ import { Toast, ToastBody, ToastHeader, Button } from 'reactstrap';
 import EditFriend from "./EditFriend"
 
 function FriendCard(props) {
-  
+
   const handleDelete = e => {
     e.preventDefault()
     AuthWithAxios()
@@ -16,7 +16,7 @@ function FriendCard(props) {
 
   return (
     <div className="p-3 bg-info my-2 rounded">
-        <Toast>
+        <Toast className="App" >
           <ToastHeader>
             {props.friend.name}
           </ToastHeader>

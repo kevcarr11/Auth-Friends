@@ -45,7 +45,7 @@ function AddFriend(props) {
       <ModalBody>
         <form>
           <input  placeholder="Name" type="text" name="name" value={newFriend.name} onChange={handleChanges} />
-          <input  placeholder="Age" type="number" name="age" value={newFriend.age} onChange={handleChanges} />
+          <input  placeholder="Age" type="number" min="1" name="age" value={newFriend.age} onChange={handleChanges} />
           <input  placeholder="Email" type="email" name="email" value={newFriend.email} onChange={handleChanges} />
         </form>
       </ModalBody>

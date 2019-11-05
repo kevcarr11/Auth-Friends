@@ -46,7 +46,7 @@ function EditFriend(props) {
       <ModalBody>
         <form>
           <input  placeholder="Edit Name" type="text" name="name" value={editFriend.name} onChange={handleChanges} />
-          <input  placeholder="Edit Age" type="number" name="age" value={editFriend.age} onChange={handleChanges} />
+          <input  placeholder="Edit Age" type="number" min="1" name="age" value={editFriend.age} onChange={handleChanges} />
           <input  placeholder="Edit Email" type="email" name="email" value={editFriend.email} onChange={handleChanges} />
         </form>
       </ModalBody>
