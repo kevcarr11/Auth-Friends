@@ -23,31 +23,38 @@ body {
 	margin-bottom: 20px;
 }
 
-.account-row {
-	border: 1px solid #E9E9E9;
-	padding: 10px;
-	margin-bottom: 10px;
-}
 
 nav {
 	background: #409fa9;
 	padding: 10px;
 	margin-bottom: 50px;
 	border-radius: 4px;
+	
 }
 
 nav a:not(:last-child) {
 	margin-right: 50px;
+
+}
+a:hover {
+  color: black!important;
+	
 }
 
 nav a {
 	color: white;
+
+}
+.selected {
+	color: #409fa9;
+	background: #F0F0F0;
+	padding: 10px;
 	text-decoration: none;
 }
 
-a {
-	text-decoration: none;
-	color: white;
+.link {
+	text-decoration: none!important;
+
 }
 
 input {

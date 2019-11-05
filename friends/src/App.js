@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, withRouter } from "react-router-dom"
+import { Route, NavLink, withRouter } from "react-router-dom"
 import ProtectedRoute from "./utils/ProtectedRoute"
 import './App.css';
 import Login from "./components/login";
@@ -13,10 +13,10 @@ function App() {
   return (
     <div className="App wrapper">
       <nav>
-        <Link to="/">Home</Link>
-        {!loggedIn && <Link to="/login">Login</Link>}
-        {loggedIn && <Link to="/friends">My Friends</Link>}
-        {loggedIn && <Link to="/logout">Logout</Link>}
+        <NavLink exact activeClassName="selected" className="link" to="/">Home</NavLink>
+        {!loggedIn && <NavLink className="link" activeClassName="selected" to="/login">Login</NavLink>}
+        {loggedIn && <NavLink className="link" activeClassName="selected" to="/friends">My Friends</NavLink>}
+        {loggedIn && <NavLink className="link" activeClassName="selected" to="/logout">Logout</NavLink>}
       </nav>
       
       <Route exact path="/" component={Home} />
