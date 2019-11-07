@@ -16,16 +16,17 @@ function FriendsList(props) {
         console.log(res.data)
         setUser(res.data)
         setIsLoading(false)
+        console.log(isLoading)
       })
       .catch(err => console.log(err))
-      setIsLoading(false)
-  }, [])
+      
+  }, [isLoading, setIsLoading])
 
 
 
   return (
     <>
-      {isLoading ? (
+      {isLoading  ? (
         <div>
           <Spinner color="dark" />
         </div>
@@ -34,7 +35,7 @@ function FriendsList(props) {
             <h1>My Friends List</h1>
             <AddFriend setUser={setUser} />
             {user.map((friend, index) => (
-              <FriendCard key={index} friend={friend} setUser={setUser} />
+              <FriendCard key={index} friend={friend} setUser={setUser} user={user} />
             ))}
           </div>
         )}
