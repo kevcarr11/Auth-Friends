@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import AuthWithAxios from "../utils/AuthWithAxios"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
 function EditFriend(props) {
   const [editFriend, setEditedFriend] = useState({
-    name: '',
-    age: "",
-    email: "",
-    id: Date.now()
+    name: props.name,
+    age: props.age,
+    email: props.email,
+    id: ""
   })
 
   const [modal, setModal] = useState(false);
@@ -21,6 +21,10 @@ function EditFriend(props) {
       [e.target.name]: e.target.value
     })
   }
+
+  useEffect(() => [
+
+  ], [])
 
   const handleSubmit = e => {
     e.preventDefault()

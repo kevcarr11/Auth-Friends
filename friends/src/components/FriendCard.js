@@ -24,7 +24,12 @@ function FriendCard(props) {
             <div>Age: {props.friend.age}</div>
             <div>Email: {props.friend.email}</div>
           </ToastBody>
-          <EditFriend setUser={props.setUser} friendId={props.friend.id} />
+          <EditFriend 
+          setUser={props.setUser} 
+          friendId={props.friend.id}
+          name={props.friend.name}
+          age={props.friend.age}
+          email={props.friend.email} />
           <Button color="link"onClick={handleDelete}>Delete</Button>
         </Toast>
       </div>

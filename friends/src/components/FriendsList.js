@@ -18,6 +18,7 @@ function FriendsList(props) {
         setIsLoading(false)
       })
       .catch(err => console.log(err))
+      setIsLoading(false)
   }, [])
 
 
